@@ -23,7 +23,7 @@ function URLScanner() {
 
     try {
       const response = await axios.post(
-        'http://127.0.0.1:8000/api/url/scan',
+  `${import.meta.env.VITE_API_URL}/api/url/scan`,
         {
           url: url.trim(),
         }

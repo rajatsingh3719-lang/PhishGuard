@@ -15,7 +15,7 @@ function Dashboard() {
   const fetchStats = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/dashboard/stats"
+        `${import.meta.env.VITE_API_URL}/api/dashboard/stats`
       );
 
       setStats(response.data);

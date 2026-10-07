@@ -8,7 +8,7 @@ function History() {
   const fetchHistory = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/history"
+        `${import.meta.env.VITE_API_URL}/api/history`
       );
 
       setHistory(response.data.history || []);
